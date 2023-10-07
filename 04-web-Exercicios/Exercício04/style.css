@@ -3,17 +3,20 @@ body {
   text-align: center;
   background-color: #333;
   margin: 0;
-  padding: 0;
+  font-size: 15px;
+  color: white;
 }
 
 input {
-  flex-direction: column;
-  display: flex;
-  margin-bottom: 10px;
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  text-align: center;
   border-radius: 4px;
+  font-size: 14px;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #333;
+  border: none;
+  color: white;
 }
 
 div {
@@ -27,18 +30,16 @@ div {
 h1 {
   font-size: 24px;
   padding: 20px;
-  margin-bottom: 50px;
-  color: white;
+  margin: 0 0 50px;
   background-color: #222;
-
 }
 
 button {
   background-color: #007bff;
-  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  color: white;
 }

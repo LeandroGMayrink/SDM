@@ -2,8 +2,9 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #333;
+  font-size: 15px;
   margin: 0;
-  padding: 0;
+  color: white;
 }
 
 div {
@@ -17,40 +18,35 @@ div {
 h1 {
   font-size: 24px;
   padding: 20px;
-  margin-bottom: 50px;
-  color: white;
+  margin: 0 0 50px;
   background-color: #222;
 }
 
-label {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-input[type="number"] {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
+h2 {
   margin-top: 10px;
 }
 
-button:hover {
-  background-color: #0056b3;
+input[type="number"] {
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 80%;
+  padding: 10px;
+  background-color: #333;
+  border: none;
+}
+
+button {
+  margin-top: 15px;
+  width: 25%;
+  background-color: #007bff;
+  border-radius: 4px;
+  border: none;
+  padding: 9px 10px;
+  color: white;
 }
 
 p {
   font-size: 18px;
-  font-weight: bold;
   margin-top: 20px;
 }
