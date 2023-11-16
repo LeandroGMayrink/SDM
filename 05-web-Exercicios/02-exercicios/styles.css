@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.resultado-background {
+  width: 270px;
+  height: 100px;
+  margin: 20px auto;
+  padding-top: 20px;
+  border-radius: 10px;
+  background-color: #222;
+  justify-content: center;
+}

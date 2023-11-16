@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  
+  <title>Calculadora de Hipotenusa</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="text-center">Calculadora de Hipotenusa</h1>
+
+    <div class="form-group">
+      <label for="catetoA">Valor do Cateto A:</label>
+      <input type="number" id="catetoA" class="form-control" placeholder="Informe o valor do Cateto A">
+    </div>
+
+    <div class="form-group">
+      <label for="catetoB">Valor do Cateto B:</label>
+      <input type="number" id="catetoB" class="form-control" placeholder="Informe o valor do Cateto B">
+    </div>
+
+    <button onclick="calcularHipotenusa()" class="btn btn-primary btn-block">Calcular Hipotenusa</button>
+
+    <div id="resultado" class="text-center"></div>
+  </div>
+
+</body>
+
+</html>
