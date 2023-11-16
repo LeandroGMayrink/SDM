@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>Verificar Triângulo</title>
+</head>
+
+<body>
+  <h1>Verificar Triângulo</h1>
+
+  <form action="/verificar_triangulo" method="post">
+    <label for="x">Valor de X:</label>
+    <input type="number" name="x" required>
+
+    <label for="y">Valor de Y:</label>
+    <input type="number" name="y" required>
+
+    <label for="z">Valor de Z:</label>
+    <input type="number" name="z" required>
+
+    <button type="submit">Verificar</button>
+  </form>
+</body>
+
+</html>
