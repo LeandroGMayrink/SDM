@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado das Operações</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <h1>Resultado das Operações</h1>
+
+  <div id="resultado">
+    <p>O menor número é: {{ menor }}</p>
+    <p>O maior número é: {{ maior }}</p>
+    <p>A média dos números é: {{ media }}</p>
+
+    <br><a href="{{ url_for('index') }}">Realizar Outras Operações</a>
+  </div>
+</body>
+
+</html>
