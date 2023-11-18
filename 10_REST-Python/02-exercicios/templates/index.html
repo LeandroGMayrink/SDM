@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Preço do Produto</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <h1>Consultar Preço do Produto</h1>
+
+  <form action="/consultar_preco" method="post">
+    <label for="codigo">Código do Produto:</label>
+    <input type="number" name="codigo" required>
+
+    <button type="submit">Consultar Preço</button>
+  </form>
+</body>
+
+</html>
