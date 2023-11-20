@@ -1,0 +1,4 @@
+deactivate
+pip install flask
+nomeDaPastaCriada\Scripts\Activate.ps1
+python -m venv nomeDaPastaCriada

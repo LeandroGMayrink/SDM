@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>Calculadora de Camisetas</title>
+</head>
+
+<body>
+  <h1>Calculadora de Camisetas</h1>
+  <form action="/calcular_valor" method="post">
+    <label for="pequena">Quantidade de camisetas pequenas:</label>
+    <input type="number" name="pequena" required><br>
+
+    <label for="media">Quantidade de camisetas médias:</label>
+    <input type="number" name="media" required><br>
+
+    <label for="grande">Quantidade de camisetas grandes:</label>
+    <input type="number" name="grande" required><br>
+
+    <input type="submit" value="Calcular">
+  </form>
+</body>
+
+</html>

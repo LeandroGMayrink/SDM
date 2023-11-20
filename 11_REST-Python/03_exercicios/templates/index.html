@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>Cardápio Lanchonete</title>
+</head>
+
+<body>
+  <h1>Cardápio Lanchonete</h1>
+
+  <h2>Consultar Todos os Itens</h2>
+  <button onclick="consultarCardapio()">Consultar Cardápio</button>
+  <div id="consulta-todos"></div>
+
+  <h2>Consultar Item Isoladamente</h2>
+  <label for="codigoConsulta">Código do Item:</label>
+  <input type="text" id="codigoConsulta" required>
+  <button onclick="consultarItem()">Consultar Item</button>
+  <div id="consulta-isolado"></div>
+
+  <script>
+    function consultarCardapio() {
+      fetch('/cardapio')
+        .then(response => response.json())
+        .then(data => {
+          const cardapioDiv = document.getElementById('consulta-todos');
+          cardapioDiv.innerHTML = "<h3>Itens do Cardápio:</h3>";
+
+          for (const codigo in data.cardapio) {
+            const item = data.cardapio[codigo];
+            const itemHtml = `<p><strong>Código:</strong> ${codigo} - <strong>Produto:</strong> ${item.Produto} - <strong>Preço:</strong> R$ ${item.Preco.toFixed(2)}</p>`;
+            cardapioDiv.innerHTML += itemHtml;
+          }
+        });
+    }
+
+    function consultarItem() {
+      const codigo = document.getElementById('codigoConsulta').value;
+      fetch(`/cardapio/${codigo}`)
+        .then(response => response.json())
+        .then(data => {
+          const itemIsoladoDiv = document.getElementById('consulta-isolado');
+          itemIsoladoDiv.innerHTML = "<h3>Detalhes do Item:</h3>";
+
+          if (data.message) {
+            itemIsoladoDiv.innerHTML += `<p>${data.message}</p>`;
+          } else {
+            const itemHtml = `<p><strong>Código:</strong> ${codigo} - <strong>Produto:</strong> ${data.item.Produto} - <strong>Preço:</strong> R$ ${data.item.Preco.toFixed(2)}</p>`;
+            itemIsoladoDiv.innerHTML += itemHtml;
+          }
+        });
+    }
+  </script>
+</body>
+
+</html>

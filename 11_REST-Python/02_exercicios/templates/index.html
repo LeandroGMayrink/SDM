@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>Calcular Distância</title>
+</head>
+
+<body>
+  <h1>Calcular Distância Entre Dois Pontos</h1>
+  <form action="/calcular" method="post">
+    <label for="x1">Digite o valor de x1:</label>
+    <input type="text" name="x1" required>
+    <br>
+    <label for="y1">Digite o valor de y1:</label>
+    <input type="text" name="y1" required>
+    <br>
+    <label for="x2">Digite o valor de x2:</label>
+    <input type="text" name="x2" required>
+    <br>
+    <label for="y2">Digite o valor de y2:</label>
+    <input type="text" name="y2" required>
+    <br>
+    <button type="submit">Calcular Distância</button>
+  </form>
+</body>
+
+</html>

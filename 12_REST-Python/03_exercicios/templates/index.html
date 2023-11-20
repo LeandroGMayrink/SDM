@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css?v=2">
+
+
+  <title>Calculadora de Salário</title>
+</head>
+
+<body>
+  <h1>Calculadora de Salário</h1>
+  <form action="/calcular_salario" method="post">
+    <label for="horas_normais">Horas normais trabalhadas:</label>
+    <input type="number" name="horas_normais" step="0.01" required><br>
+
+    <label for="horas_extra">Horas extras trabalhadas:</label>
+    <input type="number" name="horas_extra" step="0.01" required><br>
+
+    <input type="submit" value="Calcular">
+  </form>
+</body>
+
+</html>

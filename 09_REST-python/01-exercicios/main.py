@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-app.debug = False  # Desativa o depurador do Flask
+app.debug = False 
 
 @app.route('/')
 def index():
